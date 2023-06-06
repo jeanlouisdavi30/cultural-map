@@ -1,0 +1,414 @@
+{% extends 'layouts/default.html' %}
+{% block body %}
+<div class="row mt-10">
+    <div class="col-lg-2 col-md-2 col-sm-12">
+        <div class="row">
+            <div class="col-12">
+                <hr />
+                <button class="btn btn-primary mt-1" id="send_search2" style="float:right;font-size:12px">Lancer</button>
+            </div>
+
+        </div>
+
+        <div class="row">
+            <div class="col-12">
+                <hr />
+                <div style="font-size:12px">
+                    <b>Rechercher artiste </b>
+                </div>
+                <div style="font-size: 12px; margin-top:5px">
+                    <input type="text" class="form-control" id="search_nom" placeholder="Nom"
+                        style="font-size: 12px;" />
+                </div>
+                <div style="font-size: 12px; margin-top:5px">
+                    <input type="text" class="form-control" id="search_prenom" placeholder="Prenom"
+                        style="font-size: 12px;" />
+                </div> <div style="font-size: 12px; margin-top:5px">
+                    <input type="text" class="form-control" id="search_artiste" placeholder="Nom d'artiste"
+                        style="font-size: 12px;" />
+                </div>
+
+
+            </div>
+         </div>
+         <div class="row">
+
+            <div class="col-12">
+                <hr />
+                <div style="font-size: 12px;">
+                    <b>Sexe</b>
+                </div>
+                <select name="division" id="sexe" class="form-control" style="float:right;font-size:12px">
+                    <option value="NA"></option>
+                    <option value="Homme">Homme</option>
+                    <option value="Femme">Femme</option>
+                </select>
+            </div>
+        </div>
+         <div class="row">
+            <div class="col-12">
+                <hr />
+                <div style="font-size: 12px;">
+                    <b>Groupe d'age</b>
+                </div>
+                <div style="font-size: 12px; margin-top:5px">
+                    <input type="checkbox" name="group_age" id="group_age" value="18-25 ans"> <label for="group_age"
+                        style="font-size: 12px;">18-25 ans</label>
+                </div>
+                <div style="font-size: 12px; margin-top:5px">
+                    <input type="checkbox" name="group_age" id="group_age1" value="26-35 ans"> <label for="group_age1"
+                        style="font-size: 12px;">26-35 ans</label>
+                </div>
+                <div style="font-size: 12px; margin-top:5px">
+                    <input type="checkbox" name="group_age" id="group_age2" value="36-50 ans"> <label for="group_age2"
+                        style="font-size: 12px;">36-50 ans</label>
+                </div>
+                <div style="font-size: 12px; margin-top:5px">
+                    <input type="checkbox" name="group_age" id="group_age3" value="50-70 ans"> <label for="group_age3"
+                        style="font-size: 12px;">50-70 ans</label>
+                </div>
+                <div style="font-size: 12px; margin-top:5px">
+                    <input type="checkbox" name="group_age" id="group_age4" value="+ de 70 ans"> <label for="group_age4"
+                        style="font-size: 12px;">+ de 70 ans</label>
+                </div>
+                <div style="font-size: 12px; margin-top:5px">
+                    <input type="checkbox" name="group_age" id="group_age5" value="inconnu"> <label for="group_age5"
+                        style="font-size: 12px;">inconnu</label>
+                </div>
+               
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12">
+                <hr />
+                <div style="font-size: 12px;">
+                    <b>Discipine que vous evoluez?</b>
+                </div>
+                <div style="font-size: 12px; margin-top:5px">
+                    <input type="checkbox" name="dis_artis_princ" id="theatre" value="theatre"> <label for="theatre"
+                        style="font-size: 12px;">théâtre</label>
+                </div>
+                <div style="font-size: 12px;">
+                    <input type="checkbox" name="dis_artis_princ" id="musique" value="musique"> <label for="musique"
+                        style="font-size: 12px;">musique</label>
+                </div>
+                <div style="font-size: 12px;">
+                    <input type="checkbox" name="dis_artis_princ" id="chant" value="chant"> <label for="chant"
+                        style="font-size: 12px;">chant</label>
+                </div>
+                <div style="font-size: 12px;">
+                    <input type="checkbox" name="dis_artis_princ" id="danse" value="danse"> <label for="danse"
+                        style="font-size: 12px;">danse</label>
+                </div>
+                <div style="font-size: 12px;">
+                    <input type="checkbox" name="dis_artis_princ" id="conte" value="conte"> <label for="danse"
+                        style="font-size: 12px;">conte</label>
+                </div>
+                <div style="font-size: 12px;">
+                    <input type="checkbox" name="dis_artis_princ" id="marionnette" value="marionnette"> <label
+                        for="marionnette" style="font-size: 12px;">marionnette</label>
+                </div>
+                <div style="font-size: 12px;">
+                    <input type="checkbox" name="dis_artis_princ" id="cirque" value="cirque"> <label for="cirque"
+                        style="font-size: 12px;">cirque</label>
+                </div>
+                <div style="font-size: 12px;">
+                    <input type="checkbox" name="dis_artis_princ" id="arts_plastiques" value="arts_plastiques"> <label
+                        for="arts_plastiques" style="font-size: 12px;">arts plastiques</label>
+                </div>
+                <div style="font-size: 12px;">
+                    <input type="checkbox" name="dis_artis_princ" id="photographie" value="photographie"> <label
+                        for="photographie" style="font-size: 12px;">photographie</label>
+                </div>
+                <div style="font-size: 12px;">
+                    <input type="checkbox" name="dis_artis_princ" id="arts_numériques" value="arts_numériques"> <label
+                        for="arts_numériques" style="font-size: 12px;">arts numériques</label>
+                </div>
+                <div style="font-size: 12px;">
+                    <input type="checkbox" name="dis_artis_princ" id="audiovisuel" value="audiovisuel"> <label
+                        for="audiovisuel" style="font-size: 12px;">audiovisuel</label>
+                </div>
+                <div style="font-size: 12px;">
+                    <input type="checkbox" name="dis_artis_princ" id="litterature" value="litterature"> <label
+                        for="litterature" style="font-size: 12px;">littérature</label>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <hr />
+            <div class="col-12">
+                <button class="btn btn-primary" id="send_search" style="float:right;font-size:12px">Lancer</button>
+            </div>
+            <hr />
+        </div>
+
+    </div>
+    <div class="col-lg-10 col-md-10 col-sm-12">
+        <hr />
+        <div class="row">
+            <div class="col-lg-7">
+                <h6>Localisation des profils d'artistes et lieux cultutels</h6><span id="total_id" style="font-size: 12px bold;"></span>
+            </div>
+
+        </div>
+        <hr />
+        <div id="map" style="width:100%; height:730px; border: 1px solid #AAA;"></div>
+
+    </div>
+  
+</div>
+
+
+
+
+
+
+
+{% endblock body %}
+{% block script %}
+<script>
+
+    let revenu_temps_normal = ['NA']
+    let group_age = ['NA']
+    let site_internet = "NA";
+    let subventions = "NA";
+    let dis_artis_princ = ['NA'];
+    let log_transform = 0;
+    let normalize = 0;
+    let resp;
+    let sexe ='NA'
+    let firstname = "NA";
+    let lastname = "NA";
+    let search_artiste = 'NA';
+
+
+    $('input[type="checkbox"]').change(function () {
+        if ($(this).prop('checked') === true) {
+            if ($(this).prop('name') === "revenu_temps_normal") {
+                revenu_temps_normal.push($(this).attr("value"))
+
+            }
+            if ($(this).prop('name') === "site_int_oui") {
+                site_internet = "oui"
+            }
+            if ($(this).prop('name') === "subventions") {
+                subventions = "oui"
+
+            }
+            if ($(this).prop('name') === "dis_artis_princ") {
+                dis_artis_princ.push($(this).attr("value"))
+            }
+
+            if ($(this).prop('name') === "group_age") {
+                group_age.push($(this).attr("value"))
+            }
+
+            if ($(this).prop('name') === "log_transform") {
+                log_transform = 1
+
+            }
+            if ($(this).prop('name') === "normalize") {
+                normalize = 1
+                console.log(normalize)
+
+            }
+
+        } else {
+            if ($(this).prop('name') === "revenu_temps_normal") {
+                revenu_temps_normal.splice(jQuery.inArray($(this).attr("value"), revenu_temps_normal), 1)
+            }
+            if ($(this).prop('name') === "site_int_oui") {
+                site_internet = "non"
+            }
+            if ($(this).prop('name') === "subventions") {
+                subventions = "non"
+
+            }
+            if ($(this).prop('name') === "dis_artis_princ") {
+                dis_artis_princ.splice(jQuery.inArray($(this).attr("value"), dis_artis_princ), 1)
+            }
+            if ($(this).prop('name') === "group_age") {
+                group_age.splice(jQuery.inArray($(this).attr("value"), dis_artis_princ), 1)
+            }
+
+            if ($(this).prop('name') === "log_transform") {
+                log_transform = 0
+
+            }
+            if ($(this).prop('name') === "normalize") {
+                normalize = 0
+
+            }
+
+
+        }
+        console.log(revenu_temps_normal)
+
+    })
+    /*
+    var values ="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+      
+    var tiles = L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+        maxZoom: 18,
+        //attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    });
+     */
+
+
+
+    /*
+    
+    var littleton = L.marker([18.99997, -72.785215]).bindPopup('This is Littleton, CO.'),
+        denver    = L.marker([18.98997, -72.785215]).bindPopup('This is Denver, CO.'),
+        aurora    = L.marker([18.81997, -72.780215]).bindPopup('This is Aurora, CO.'),
+        golden    = L.marker([18.80997, -72.78215]).bindPopup('This is Golden, CO.');
+    */
+    var markers = []
+    var cities = L.layerGroup([]);
+    var overlayMaps = {
+        "Cities": cities
+    };
+    let control;
+
+    latlng = new L.LatLng(18.99997, -72.785215);
+
+    var map = new L.Map('map', { center: latlng, zoom: 8 });
+    /*
+    
+           var mapboxAccessToken = 'pk.eyJ1IjoibWFydmVsYW1hem9uMTIiLCJhIjoiY2s4b2lzbmV0MTlpNzNqbzJtdW1lcTBscCJ9.2USdsYTBodn8NXSqr2Ljlw';
+        let coords = [18.99997, -72.785215];
+        let map = L.map('map',{minZoom: 8,maxZoom: 7.5},tiles =[tiles]).setView(coords,8);
+        
+     */
+    var tileLayer = L.tileLayer('https://api.mapbox.com/styles/v1/n-alathba/cj2fzxjgl00bl2rqno6mtb9wg/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1Ijoibi1hbGF0aGJhIiwiYSI6ImNqMmZ6bTQ2cDAwNDIyeW8wY2hidjFxdjUifQ.TyQ2WNEMtCO3Q84PYXlAEA', {
+        attribution: 'Tiles by <a href="http://mapc.org">MAPC</a>, Data by <a href="http://mass.gov/mgis">MassGIS</a>',
+        maxZoom: 18,
+        minZoom: 1,
+    }).addTo(map);
+    
+    let url = '/map2/' + group_age + '/' + sexe + '/' + dis_artis_princ + '/' + firstname+ '/' +lastname +'/'+search_artiste;
+
+    $.get(url,
+        function (data, textStatus, jqXHR) {  // success callback
+            data = jQuery.parseJSON(data)
+            values = 0
+            total_div = $('#total_id')[0]
+           
+            for (i = 0; i < data.length; i++) {
+
+                if (data[i].lat && data[i].long) {
+                    data[i].id_facebook =data[i].id_facebook === 'N/A' ? '':data[i].id_facebook
+                    data[i].id_instagram = data[i].id_instagram === 'N/A' ? '':data[i].id_instagram
+                    var value = display_data(data[i])
+
+
+                    L.marker([data[i].lat, data[i].long]).addTo(map).bindPopup(value)
+                    values++;
+
+                }
+
+
+            }
+            total_div.innerHTML = "<b>" +  display(values) + "</b>"
+
+
+        });
+
+
+
+    let button_search2 = $('#send_search2')
+    button_search2.click(function () {
+        firstname = $('#search_nom').val() == "" ? "NA" : $('#search_nom').val()
+        lastname = $('#search_prenom').val() == "" ? "NA" : $('#search_prenom').val()
+        search_artiste = $('#search_artiste').val() == "" ? 'NA':  $('#search_artiste').val()
+        sexe = $("#sexe").val() 
+        url = '/map2/' + group_age + '/' +sexe + '/' + dis_artis_princ + '/' + firstname+ '/' +lastname+ '/'+search_artiste
+        console.log(url)
+        $.get(url,  // url
+            function (data, textStatus, jqXHR) {  // success callback
+                data = jQuery.parseJSON(data)
+                total_div = $('#total_id')[0]
+                var values = data.length
+                total_div.innerHTML = "<b>" +  display(values) + "</b>"
+                map.eachLayer((layer) => {
+                    layer.remove();
+                });
+                tileLayer.addTo(map)
+                var values = 0
+               
+                for (i = 0; i < data.length; i++) {
+
+                    if (data[i].lat && data[i].long) {
+                        data[i].id_facebook =data[i].id_facebook == 'N/A' ? '':data[i].id_facebook
+                        data[i].id_instagram = data[i].id_instagram === 'N/A' ? '':data[i].id_instagram
+                        var value = display_data(data[i])
+                        L.marker([data[i].lat, data[i].long]).addTo(map).bindPopup(value)
+                        values++
+
+                    }
+
+                }
+
+                total_div.innerHTML = "<b>" +  display(values) + "</b>"
+
+            });
+    })
+    let button_search = $('#send_search')
+
+    button_search.click(function () {
+        firstname = $('#search_nom').val() == "" ? "NA" : $('#search_nom').val()
+        lastname = $('#search_prenom').val() == "" ? "NA" : $('#search_prenom').val()
+        search_artiste = $('#search_artiste').val() == "" ? 'NA':  $('#search_artiste').val()
+        sexe = $("#sexe").val() 
+        url = '/map2/' + group_age + '/' +sexe + '/' + dis_artis_princ + '/' + firstname+ '/' +lastname+ '/'+search_artiste
+        console.log(url)
+        $.get(url,  // url
+            function (data, textStatus, jqXHR) {  // success callback
+                data = jQuery.parseJSON(data)
+                map.eachLayer((layer) => {
+                    layer.remove();
+                });
+                tileLayer.addTo(map)
+                var values = 0
+                total_div = $('#total_id')[0]
+                
+
+                for (i = 0; i < data.length; i++) {
+
+                    if (data[i].lat && data[i].long) {
+                        data[i].id_facebook = data[i].id_facebook === 'N/A' ? '':data[i].id_facebook
+                        data[i].id_instagram = data[i].id_instagram === 'N/A' ? '':data[i].id_instagram
+                        var value = display_data(data[i])
+                        L.marker([data[i].lat, data[i].long]).addTo(map).bindPopup(value)
+                        values++
+
+                    }
+
+                }
+
+                total_div.innerHTML = "<b>" + values + " acteurs culturels </b>"
+
+            });
+    })
+
+    // display toolsTip 
+    function display_data(data) {
+        return "<table>" + "<tr>" + "<th> Nom" + "</td>" + "<td style='text-align: rigth'>" + data.nom + "</td> </tr>"
+            + "<tr>" + "<th> Prenom" + "</td>" + "<td>" + data.prenom + "</td> </tr>"
+            + "<tr>" + "<th> Nom d'artiste" + "</td>" + "<td>" + data.nom_artiste + "</td> </tr>"
+            + "<tr>" + "<th> Groupe d'age" + "</td>" + "<td>" + data.age_group + "</td> </tr>"
+            + "<tr>" + "<th> Sexe" + "</td>" + "<td>" + data.sexe + "</td> </tr>"
+            + "<tr>" + "<th> Nationalite" + "</td>" + "<td>" + data.nationalite + "</td> </tr>"
+            + "<tr>" + "<th> Facebook id" + "</td>" + "<td> <a href =\'"+"https://web.facebook.com/search/top/?q="+data.id_facebook +"\'>" +data.id_facebook + "</a></td> </tr>"
+            + "<tr>" + "<th> Instagram id" + "</td>" + "<td> <a href =\'"+"https://www.instagram.com/"+data.id_instagram +"\'>" +data.id_instagram + "</a></td> </tr>"
+            + "<tr>" + "<th> Email" + "</td>" + "<td>" + data.email + "</td> </tr>"
+            + "<tr>" + "<th> Discipline" + "</td>" + "<td>" + data.dis_artis_princ + "</td> </tr>"
+            + "</table>"
+    }
+  function display(site)
+  {
+      return site<=1? site +' acteur culturel': site+' acteurs culturels'
+  }
+</script>
+{% endblock script %}

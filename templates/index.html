@@ -1,0 +1,492 @@
+{% extends 'layouts/default.html' %}
+{% block body %}
+<div class="row mt-10">
+    <div class="col-lg-2 col-md-2 col-sm-12">
+        <div class="row">
+            <div class="col-12">
+                <hr/>
+
+                <button class="btn btn-primary mt-1" id="send_search2" style="float:right;font-size:12px">Lancer</button>
+            </div>
+
+        </div>
+        <div class="row">
+
+            <div class="col-12">
+                <hr />
+                <select name="division" id="division" class="form-control" style="float:right;font-size:12px">
+                    <option value="commune">Commune</option>
+                    <option value="departement">Departement</option>
+                </select>
+            </div>
+        </div>
+     
+        <div class="row">
+            <div class="col-12">
+                <hr />
+                <div style="font-size:12px">
+                    <b>Quel est votre revenu ?</b>
+                </div>
+                <div style="font-size: 12px; margin-top:5px">
+                    <input type="checkbox" name="revenu_temps_normal" id="tranche_1" value="revenu_tranche1"> <label
+                        for="tranche_1" style="font-size: 12px;">moins de 240,000 HTG</label>
+                </div>
+                <div style="font-size: 12px;">
+                    <input type="checkbox" name="revenu_temps_normal" id="tranche_2" value="revenu_tranche2"> <label
+                        for="tranche_2" style="font-size: 12px;">entre 240,000 et 480,000 HTG</label>
+                </div>
+                <div style="font-size: 12px;">
+                    <input type="checkbox" name="revenu_temps_normal" id="tranche_3" value="revenu_tranche4"> <label
+                        for="tranche_3" style="font-size: 12px;">entre 480,000 et 720,000 HTG</label>
+                </div>
+                <div style="font-size: 12px;">
+                    <input type="checkbox" name="revenu_temps_normal" id="tranche_4" value="revenu_tranche5"> <label
+                        for="tranche_4" style="font-size: 12px;">entre 720,000 et 960,000 HTG</label>
+                </div>
+                <div style="font-size: 12px;">
+                    <input type="checkbox" name="revenu_temps_normal" id="tranche_5" value="revenu_tranche6"> <label
+                        for="tranche_5" style="font-size: 12px;">plus de 960,000 HTG</label>
+                </div>
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <hr />
+                <div style="font-size: 12px;">
+                    <b>Avez vous une site internet ?</b>
+                </div>
+                <div style="font-size: 12;margin-top:5px">
+                    <input type="checkbox" name="site_int_oui" id="site_int_oui"> <label for="site_int_oui"
+                        style="font-size: 12px;">cocher pour dire oui</label>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <hr />
+                <div style="font-size: 12px;">
+                    <b>Recevez-vous parfois des subventions ?</b>
+                </div>
+                <div style="font-size: 12;margin-top:5px">
+                    <input type="checkbox" name="subventions" id="subvention_oui" value="Non"> <label
+                        for="subvention_oui" style="font-size: 12px;">cocher pour dire oui</label>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <hr />
+                <div style="font-size: 12px;">
+                    <b>Discipine que vous evoluez?</b>
+                </div>
+                <div style="font-size: 12px; margin-top:5px">
+                    <input type="checkbox" name="dis_artis_princ" id="theatre" value="theatre"> <label for="theatre"
+                        style="font-size: 12px;">théâtre</label>
+                </div>
+                <div style="font-size: 12px;">
+                    <input type="checkbox" name="dis_artis_princ" id="musique" value="musique"> <label for="musique"
+                        style="font-size: 12px;">musique</label>
+                </div>
+                <div style="font-size: 12px;">
+                    <input type="checkbox" name="dis_artis_princ" id="chant" value="chant"> <label for="chant"
+                        style="font-size: 12px;">chant</label>
+                </div>
+                <div style="font-size: 12px;">
+                    <input type="checkbox" name="dis_artis_princ" id="danse" value="danse"> <label for="danse"
+                        style="font-size: 12px;">danse</label>
+                </div>
+                <div style="font-size: 12px;">
+                    <input type="checkbox" name="dis_artis_princ" id="conte" value="conte"> <label for="danse"
+                        style="font-size: 12px;">conte</label>
+                </div>
+                <div style="font-size: 12px;">
+                    <input type="checkbox" name="dis_artis_princ" id="marionnette" value="marionnette"> <label
+                        for="marionnette" style="font-size: 12px;">marionnette</label>
+                </div>
+                <div style="font-size: 12px;">
+                    <input type="checkbox" name="dis_artis_princ" id="cirque" value="cirque"> <label for="cirque"
+                        style="font-size: 12px;">cirque</label>
+                </div>
+                <div style="font-size: 12px;">
+                    <input type="checkbox" name="dis_artis_princ" id="arts_plastiques" value="arts_plastiques"> <label
+                        for="arts_plastiques" style="font-size: 12px;">arts plastiques</label>
+                </div>
+                <div style="font-size: 12px;">
+                    <input type="checkbox" name="dis_artis_princ" id="photographie" value="photographie"> <label
+                        for="photographie" style="font-size: 12px;">photographie</label>
+                </div>
+                <div style="font-size: 12px;">
+                    <input type="checkbox" name="dis_artis_princ" id="arts_numériques" value="arts_numériques"> <label
+                        for="arts_numériques" style="font-size: 12px;">arts numériques</label>
+                </div>
+                <div style="font-size: 12px;">
+                    <input type="checkbox" name="dis_artis_princ" id="audiovisuel" value="audiovisuel"> <label
+                        for="audiovisuel" style="font-size: 12px;">audiovisuel</label>
+                </div>
+                <div style="font-size: 12px;">
+                    <input type="checkbox" name="dis_artis_princ" id="litterature" value="litterature"> <label
+                        for="litterature" style="font-size: 12px;">littérature</label>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <hr />
+            <div class="col-12">
+                <button class="btn btn-primary" id="send_search" style="float:right;font-size:12px">Lancer</button>
+            </div>
+            <hr />
+        </div>
+
+    </div>
+    <div class="col-lg-10 col-md-10 col-sm-12">
+        <hr />
+        <div class="row">
+            <div class="col-lg-7">
+                <h6>Repartitions des profils d'artistes et lieux culturels</h6> <span id="total_id" style="font-size: 12px bold;"></span>
+            </div>
+            <div class="col-lg-5">
+                <div id="myinfo" class="info legend col-lg-12 col-md-12 col-sm-12" style="float:right"></div>
+            </div>
+        </div>
+        <hr />
+        <div id="map" style="width:100%; height:730px; border: 1px solid #AAA;"></div>
+
+    </div>
+   
+</div>
+
+
+
+
+
+
+
+{% endblock body %}
+{% block script %}
+<script>
+
+    let revenu_temps_normal = ['NA']
+    let site_internet = "NA";
+    let subventions = "NA";
+    let dis_artis_princ = ['NA'];
+    let log_transform = 0;
+    let normalize = 0;
+    let resp;
+
+    $('input[type="checkbox"]').change(function () {
+        if ($(this).prop('checked') === true) {
+            if ($(this).prop('name') === "revenu_temps_normal") {
+                revenu_temps_normal.push($(this).attr("value"))
+
+            }
+            if ($(this).prop('name') === "site_int_oui") {
+                site_internet = "oui"
+            }
+            if ($(this).prop('name') === "subventions") {
+                subventions = "oui"
+
+            }
+            if ($(this).prop('name') === "dis_artis_princ") {
+                dis_artis_princ.push($(this).attr("value"))
+            }
+
+            if ($(this).prop('name') === "log_transform") {
+                log_transform = 1
+
+            }
+            if ($(this).prop('name') === "normalize") {
+                normalize = 1
+                console.log(normalize)
+
+            }
+
+        } else {
+            if ($(this).prop('name') === "revenu_temps_normal") {
+                revenu_temps_normal.splice(jQuery.inArray($(this).attr("value"), revenu_temps_normal), 1)
+            }
+            if ($(this).prop('name') === "site_int_oui") {
+                site_internet = "non"
+            }
+            if ($(this).prop('name') === "subventions") {
+                subventions = "non"
+
+            }
+            if ($(this).prop('name') === "dis_artis_princ") {
+                dis_artis_princ.splice(jQuery.inArray($(this).attr("value"), dis_artis_princ), 1)
+            }
+
+            if ($(this).prop('name') === "log_transform") {
+                log_transform = 0
+
+            }
+            if ($(this).prop('name') === "normalize") {
+                normalize = 0
+
+            }
+
+
+        }
+        console.log(revenu_temps_normal)
+
+    })
+
+
+    let division = $('#division')
+
+    let win = $(window)
+
+    //console.log(pal)
+
+
+
+    /*
+      div = $("#myinfo")[0]
+  
+      grades = palette.values,
+          labels = [];
+  
+      // loop through our density intervals and generate a label with a colored square for each interval
+      // first loop for colored legend boxes
+      for (var i = 0; i < grades.length; i++) {
+          div.innerHTML +=
+              '<span style="background:' + palette.color[i] + '"></span> ';
+      }
+  
+      // a line break
+      div.innerHTML += '<br>';
+  
+      // second loop for text
+      for (var i = 0; i < grades.length; i++) {
+          div.innerHTML +=
+              '<label>' + grades[i] + (grades[i + 1] ? '&ndash;' + grades[i + 1] : '+') + '</label>';
+      }
+  
+  */
+
+
+
+    /*$('#etablissement').val(etablissement)
+   */
+    var mapboxAccessToken = 'pk.eyJ1IjoibWFydmVsYW1hem9uMTIiLCJhIjoiY2s4b2lzbmV0MTlpNzNqbzJtdW1lcTBscCJ9.2USdsYTBodn8NXSqr2Ljlw';
+    let coords = [18.99997, -72.785215];
+    let map = L.map('map', { minZoom: 8, maxZoom: 7.5 }).setView(coords, 8);
+
+    div = $("#myinfo")[0]
+
+
+
+
+
+    info = new L.Control({ position: 'topright' });
+
+    info.onAdd = function () {
+        this._div = L.DomUtil.create("div", "info");
+        this.update();
+        return this._div;
+    };
+
+    info.update = function (props) {
+
+        if (division.val() == "departement") {
+            this._div.innerHTML = '<h6>Répartion des profils d\'artistes et lieux culturels</h6>' + (props ?
+                '<b>' + props.ADM1_FR + '</b><br />' + display(props.value) + ''
+                : 'Sur tout le territoire');
+        }
+        else {
+            this._div.innerHTML = '<h6>Répartion des profils d\'artistes et lieux culturels</h6>' + (props ?
+                '<b>' + props.ADM2_FR + '</b><br />' + display(props.value) + ''
+                : 'Sur tout le territoire');
+        }
+
+    };
+
+
+    function style(feature) {
+        return {
+            fillColor: feature.properties.color == 'back'?"red":feature.properties.color,
+            weight: 1,
+            opacity: 1,
+            color: "White",
+            dashArray: '1',
+            fillOpacity: 1
+        };
+    }
+
+    info.addTo(map);
+
+    function resetHighlight(e) {
+        geojson.resetStyle(e.target);
+        info.update();
+    }
+
+    function zoomToFeature(e) {
+        map.fitBounds(e.target.getBounds());
+    }
+
+    function highlightFeature(e) {
+        const layer = e.target;
+
+        layer.setStyle({
+            weight: 3,
+            color: "#666",
+            dashArray: "",
+            fillOpacity: 1
+        });
+
+        if (!L.Browser.ie && !L.Browser.edge) {
+            layer.bringToFront();
+        }
+
+        info.update(layer.feature.properties);
+    }
+    function onEachFeature(feature, layer) {
+        layer.on({
+            mouseover: highlightFeature,
+            mouseout: resetHighlight,
+
+        });
+    }
+
+    map.on('click', function () {
+        if (map.scrollWheelZoom.enabled()) {
+            map.scrollWheelZoom.disable();
+        }
+        else {
+            map.scrollWheelZoom.enable();
+        }
+    });
+
+
+    $.get('/map/' + "commune" + '/' + "hello")
+        .done(response => {
+
+            resp = jQuery.parseJSON(response);
+            data = jQuery.parseJSON(resp.data)
+            total_div = $('#total_id')[0]
+            total_div.innerHTML = "<b>" + display(resp.total) + "</b>"
+            console.log(data.data)
+            geojson = L.geoJson(data, {
+                style: style,
+                onEachFeature: onEachFeature
+            }).addTo(map);
+            div.innerHTML = ""
+            for (var i = 0; i < resp.color_map.color.length; i++) {
+                div.innerHTML +=
+                    '<span style="background:' + resp.color_map.color[i] + '"></span> ';
+            }
+
+            // a line break
+            div.innerHTML += '<br>';
+
+            // second loop for text
+            for (var i = 0; i < resp.color_map.values.length; i++) {
+                div.innerHTML +=
+                    '<label>' + resp.color_map.values[i] + (resp.color_map.values[i + 1] ? '&ndash;' + resp.color_map.values[i + 1] : '+') + '</label>';
+            }
+
+        });
+
+    console.log(division.val())
+    /*
+            div.change(
+              function(){
+                division = div.val()
+            
+             
+            $.get('/map/' + division + '/' + "hello")
+             .done(response => {
+                let dis_artis_princ =new Array()
+                data = jQuery.parseJSON(response);
+                geojson = L.geoJson(data, {
+                    style: style,
+                    onEachFeature: onEachFeature
+                }).addTo(map);
+               
+    
+    
+            });
+    
+            })
+    */
+    let button_search = $('#send_search')
+    button_search.click(function () {
+
+        console.log(log_transform, normalize)
+        $.get('/map1/' + division.val() + '/' + revenu_temps_normal + '/' + site_internet + '/' + subventions + '/' + dis_artis_princ + '/' + log_transform + '/' + normalize)
+            .done(response => {
+                resp = jQuery.parseJSON(response);
+                data = jQuery.parseJSON(resp.data)
+                total_div.innerHTML = "<b>" + display(resp.total) + "</b>"
+                console.log(data.data)
+                console.log(data.data)
+                map.eachLayer((layer) => {
+                    layer.remove();
+                });
+                geojson = L.geoJson(data, {
+                    style: style,
+                    onEachFeature: onEachFeature
+                }).addTo(map);
+
+                div.innerHTML = ""
+                for (var i = 0; i < resp.color_map.color.length; i++) {
+                    div.innerHTML +=
+                        '<span style="background:' + resp.color_map.color[i] + '"></span> ';
+                }
+
+                // a line break
+                div.innerHTML += '<br>';
+
+                // second loop for text
+                for (var i = 0; i < resp.color_map.values.length; i++) {
+                    div.innerHTML +=
+                        '<label>' + resp.color_map.values[i] + (resp.color_map.values[i + 1] ? '&ndash;' + resp.color_map.values[i + 1] : '+') + '</label>';
+                }
+            });
+
+    })
+
+    let button_search2 = $('#send_search2')
+    button_search2.click(function () {
+
+        console.log(log_transform, normalize)
+        $.get('/map1/' + division.val() + '/' + revenu_temps_normal + '/' + site_internet + '/' + subventions + '/' + dis_artis_princ + '/' + log_transform + '/' + normalize)
+            .done(response => {
+                resp = jQuery.parseJSON(response);
+                data = jQuery.parseJSON(resp.data)
+                total_div.innerHTML = "<b>" + display(resp.total) + "</b>"
+                console.log(data.data)
+                console.log(data.data)
+                map.eachLayer((layer) => {
+                    layer.remove();
+                });
+                geojson = L.geoJson(data, {
+                    style: style,
+                    onEachFeature: onEachFeature
+                }).addTo(map);
+
+                div.innerHTML = ""
+                for (var i = 0; i < resp.color_map.color.length; i++) {
+                    div.innerHTML +=
+                        '<span style="background:' + resp.color_map.color[i] + '"></span> ';
+                }
+
+                // a line break
+                div.innerHTML += '<br>';
+
+                // second loop for text
+                for (var i = 0; i < resp.color_map.values.length; i++) {
+                    div.innerHTML +=
+                        '<label>' + resp.color_map.values[i] + (resp.color_map.values[i + 1] ? '&ndash;' + resp.color_map.values[i + 1] : '+') + '</label>';
+                }
+            });
+
+    })
+
+  function display(site)
+  {
+      return site<=1? site +' acteur culturel': site+' acteurs culturels'
+  }
+
+</script>
+{% endblock script %}
